@@ -4,8 +4,8 @@
    Case Problem 3
 
    Pixal Arts and Entertainment Animation Styles
-   Author: 
-   Date:   
+   Author: Jacob Gordon
+   Date:   1/30
 
    Filename: 
    
@@ -21,7 +21,7 @@
 
 /* Transition Effects */
 /* the navigation menu for the game links is having transitioning to a white font color */
-nav#gameLinks {
+nav#gameLinks a {
     position: relative;
     color: white;
     transition: color 0.5s
@@ -35,13 +35,15 @@ nav#gameLinks a:hover {
 
 nav#gameLinks a::after {
     content: "";
-    content: absolute;
+    position: absolute;
     width: 0%;
     height: 8px;
+    left: 0;
+    top: 100%;
     background: linear-gradient(to right rgb(237, 243, 71), rgb(188, 74, 0));
     opacity: 0;
     border-radius: 4px;
-    transition: opacity 0.5s width 0.5s;
+    transition: opacity 0.5s, width 0.5s;
 }
 
 nav#gameLinks a:hover::after {
@@ -55,8 +57,15 @@ div#bat {
     height: 50px;
     top: -50px;
     left: 100px;
+    background: url(paa_bat.png) left center no-repeat 100%;
 }
 
 
+div#butterfly {
+    width: 35px;
+    height: 35px;
+    top: 60px;
+    left: -50px;
+}
 
 /* Animation Styles */
